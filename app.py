@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def hello_world():
+    print('pull')
     if (request.headers.get('X-GitHub-Event', '') == 'push'):
         os.startfile('./pull.bat')
     return ''
