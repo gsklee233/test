@@ -13,7 +13,7 @@ app = Flask(__name__)
 def hello_world():
     print('pull')
     if (request.headers.get('X-GitHub-Event', '') == 'push'):
-        os.startfile('./pull.bat')
+        os.startfile(os.path.abspath('./pull.bat'))
     return ''
 
 
