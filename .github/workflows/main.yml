@@ -1,7 +1,7 @@
 name: test
 on:
-  release:
-    types: [published]
+  schedule:
+    - cron: "*/5 * * * *"
 jobs:
   hello:
     name: hello
